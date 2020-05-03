@@ -1,4 +1,5 @@
 # EnvSense 
+[![Build Status](https://travis-ci.com/SrzStephen/EnvSense.svg?token=oLvruYNkwQmtpP6uNRVv&branch=master)](https://travis-ci.com/SrzStephen/EnvSense)
 ![](image)
 * Hey since i'm working from home more, I wonder what that's doing to me*
 

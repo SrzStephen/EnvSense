@@ -1,0 +1,16 @@
+# Libraries
+## Sensors
+Class to deal with non initiation related stuff for sensors, including generating a json payload from the sensors and testing whether sensors are working or not.
+
+## iot 
+Class to be a bit of a wrapper to PubSubClient to keep main clean from unnessessary stuff realated to the inner workings and setup of the MQTT client.
+
+## Bosch-BSEC
+To get the BME-680 to output some IAQ calculations from the internal [gas resisistance (3.4.1)](https://cdn-shop.adafruit.com/product-files/3660/BME680.pdf) value, you need to link a binary that Bosh provides called '''libalgobsec.a```.
+
+This binary gets linked via the ```build_flag``` in ```.platformio.ini```, and assumes a relative path to your current directory and is only built for the ```ESP32```. For other variants [you should look at builds against other microcontrollers](https://github.com/BoschSensortec/BSEC-Arduino-library/tree/master/src)
+
+There are [other ways]https://github.com/G6EJD/BME680-Example() to calculate IAQ from the BME-680, but these seeem less scientific.
+
+## PubSubClient
+Literally just a copy of [knollearys pubsubclient](https://github.com/knolleary/pubsubclient) at ```update 2.7```, with some changes to the ```PubSubClient.h``` to allow a larger payload (default is 256 bytes) and to increase the timeout to something more reasonable for my purposes.
